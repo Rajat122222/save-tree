@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree</title>
+</head>
+<style>
+    body{
+        text-align: center;
+        /* background: linear-gradient(green,yellow);
+        background-position: center;
+        background-size:contain;
+        background-repeat: no-repeat; */
+        background-image: url('https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2019/07/12105348/bark-branches-environment-1632790.jpg');
+    }
+    h1{
+        color:royalblue;
+        text-align: center;
+    }
+    H2{
+        color:rgb(244, 11, 11);
+        text-align: center;
+
+    }
+    
+</style>
+<body>
+    <h1  > Save Trees</h1>
+    <h2 id="reason"> Here are 5 reasons for why to save trees.</h2>
+   <p style="text-align: center;"> <img id ="img1"src="https://images.pexels.com/photos/1287089/pexels-photo-1287089.jpeg?auto=compress&cs=tinysrgb&w=600 " height="350px" width="450px"  alt="" class="center"></p><br>
+    <button id="next" onclick="next()"> next</button>
+    <script>
+    var imgs=[
+        'https://images.pexels.com/photos/2890344/pexels-photo-2890344.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+       'https://images.pexels.com/photos/1459534/pexels-photo-1459534.jpeg?auto=compress&cs=tinysrgb&w=600',
+       'https://images.pexels.com/photos/23547/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+       'https://images.pexels.com/photos/14617689/pexels-photo-14617689.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+       'https://images.pexels.com/photos/589802/pexels-photo-589802.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    ]
+    var rsns=[
+        'Trees provide us oxygen to survive',
+        'Trees give us food and shelter',
+        'Trees are habitat for many animal species',
+        'Forests help in prevention of soil erosion',
+        'Trees are the cause of precipitation'
+    ]
+    var i=0;
+    function next(){
+        if(i>=rsns.length){
+            i=0;
+        }
+        document.getElementById('reason').innerHTML=rsns[i];
+        document.getElementById('img1').src=imgs[i];
+        i++;
+    }
+    </script>
+    
+</body>
+</html>
